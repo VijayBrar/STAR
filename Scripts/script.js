@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#loginButton").click(function(){
+    /*$("#loginButton").click(function(){
         var username = $('#username').val();
         var password = $('#password').val();
         
@@ -26,10 +26,10 @@ $(document).ready(function() {
                 }
             });
         }
-    });
-    
-    var setupSubmitListener = function() {
-        $('loginForm').submit(function(event) {
+    });*/
+    $('#loginButton').click(function() {
+    var setupSubmitListener = function(e) {
+        $('#loginForm').submit(function(event) {
             var username = $('#username').val(),
             var password = $('#password').val();
             
@@ -48,7 +48,8 @@ $(document).ready(function() {
             if (username && password) {
                 return;
             }
-            event.preventDefault();
+            e.preventDefault();
         });
     }
+    });
 });
