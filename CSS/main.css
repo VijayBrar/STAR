@@ -1,0 +1,47 @@
+* {
+    font-family: 'Poiret One', 'Oxygen', 'Josefin-Sans', 'Sans-serif';
+}
+
+#loginForm {
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+#logo {
+    height: 180px;
+    margin-top: 20px;
+}
+
+.logo {
+    text-align: center;
+}
+
+#loginheader {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+}
+
+.passwordInput {
+    font-weight: 100;
+}
+
+#fp {
+    text-align: right;
+}
+
+#fpt {
+    font-weight: 800;
+}
+
+.btn {
+    background: #0072bb;
+}
+
+.btn:hover {
+    background: #428bca;
+}
+/*.container {
+    left: 0;
+    right: 0;
+}*/
