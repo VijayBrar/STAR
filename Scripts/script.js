@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    $('#')
+    $('#username, #password').keyup(function() {        
+        if ($('#username').val().length != 0) {
+            $('#usernameError').removeClass('error');
+            $('#usernameError').hide();
+            $('#username').removeClass('inputerror');
+        }
+            
+        if ($('#password').val().length !=0) {
+            $('#passwordError').removeClass('error');
+            $('#passwordError').hide();
+            $('#password').removeClass('inputerror');
+        }
+    });
+    
     $("#loginButton").click(function(e){
         e.preventDefault();
         var username = $('#username').val();
@@ -17,8 +32,8 @@ $(document).ready(function() {
         }
     
         if (username == '' || password == ''){
-            $('input[type="text"],input[type="password"]').css("border", "2px solid red");
-            $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
+            $('input[type="text"],input[type="password"]').addClass('inputerror');
+            $('input[type="text"],input[type="password"]').addClass('inputerror');
             alert("Please fill in all fields");
         }
         else{
@@ -26,14 +41,14 @@ $(document).ready(function() {
                   function(data) {
                   
                 if (data=='Username or Password is incorrect'){
-                    $('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+                    $('input[type="text"],input[type="password"]').addClass('inputerror');
                     alert(data);
                 } else if (data=='Successfully logged in'){
                     $("form")[0].reset();
-                    $('input[type="text"], input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
+                    $('input[type="text"], input[type="password"]').addClass('inputsuccess');
                     alert(data);
                     window.open('welcome.php','_self');
-                } 
+                }
             });
         }
     });
