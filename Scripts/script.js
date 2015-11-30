@@ -27,8 +27,7 @@ $(document).ready(function() {
             });
         }
     });*/
-    $('#loginButton').click(function() {
-    var setupSubmitListener = function(e) {
+    
         $('#loginForm').submit(function(event) {
             var username = $('#username').val(),
             var password = $('#password').val();
@@ -48,8 +47,6 @@ $(document).ready(function() {
             if (username && password) {
                 return;
             }
-            e.preventDefault();
+            event.preventDefault();
         });
-    }
-    });
 });
