@@ -3,8 +3,12 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-background: ;
+    background: ;
     color: #0072bb;
+}
+
+.button-list > li {
+    list-style: none;
 }
 
 .button-list-item {
@@ -37,9 +41,11 @@ img {
 .rest {
 	background: #5D8AA8;
 }
-.logo{
-height:70%;
+
+#logo{
+    height:180px;
 }
-.main screen {
-text-align:center;
+
+.mainscreen {
+    text-align:center;
 }
