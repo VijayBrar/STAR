@@ -27,21 +27,20 @@ $(document).ready(function() {
             });
         }
     });*/
-    
-        $('#loginForm').submit(function(event) {
-            var username = $('#username').val(),
+    $('#loginButton').click(function() {
+            var username = $('#username').val();
             var password = $('#password').val();
             
             if (!username) {
                 $('#usernameError').text('Enter a username').show();
-                $('#username').addClass('error');
-                $('#username').css('color', 'red');
+                $('#usernameError').addClass('error');
+                $('#usernameError').css('color', 'red');
             }
             
             if (!password) {
                 $('#passwordError').text('Enter a password').show();
-                $('#password').addClass('error');
-                $('#password').css('color', 'red');
+                $('#passwordError').addClass('error');
+                $('#passwordError').css('color', 'red');
             }
             
             if (username && password) {
